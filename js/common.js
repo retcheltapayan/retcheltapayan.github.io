@@ -65,12 +65,22 @@ $(function() {
         var s_id = $(this).attr('id');
         $('.info_content').addClass('over')
         $('.'+s_id).addClass('curr');
+        if(s_id == "s6"){
+         $('.'+s_id).css("height", "auto");
+        }
+        // alert(s_id);
+        // console.log( $('.'+s_id).attribute('class'))
     });
     $('.info_timeline ul li').mouseleave(function(){
+        var s_id = $(this).attr('id');
         $(this).removeClass('curr');
         $(this).parent().removeClass('focus');
         $('.info_content').removeClass('over')
         $('.info_content .desc').removeClass('curr');
+        if(s_id == "s6"){
+         $('.'+s_id).removeAttr('style');
+         console.log(s_id);
+        }
     }); 
 
     //banner
